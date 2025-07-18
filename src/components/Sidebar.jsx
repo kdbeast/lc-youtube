@@ -122,12 +122,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="px-6 w-[16%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
-      <div className="space-y-2 items-center">
+    <div className="px-4 w-[16%] h-[calc(100vh-1rem)] overflow-y-scroll overflow-x-hidden">
+      <div className="mt-2 space-y-2 items-center">
         {sidebarItems.map((item) => (
           <div
             key={item.id}
-            className="flex items-center space-x-6 hover:bg-gray-300 duration-300 p-1 rounded-xl cursor-pointer"
+            className="flex items-center space-x-3 hover:bg-gray-300 duration-300 p-1 rounded-xl cursor-pointer"
           >
             <div className="text-xl ">{item.icon}</div>
             <span>{item.name}</span>
@@ -137,7 +137,7 @@ const Sidebar = () => {
       <br />
       <hr />
 
-      <div className="mt-4 space-y-2 items-center">
+      <div className="mt-2 space-y-2 items-center">
         <div className="flex items-center space-x-2">
           <h1>You</h1>
           <FaChevronRight />
@@ -155,13 +155,16 @@ const Sidebar = () => {
       <br />
       <hr />
 
-      <div className="mt-4 space-y-2 items-center">
+      <div className="mt-2 space-y-2 items-center">
         <div className="flex items-center space-x-2">
           <h1 className="font-bold">Explore</h1>
           <FaChevronRight />
         </div>
         {sidebarItems3.map((item) => (
-          <div className="flex items-center space-x-4 hover:bg-gray-300 duration-200 p-1 rounded-md cursor-pointer">
+          <div
+            key={item.id}
+            className="flex items-center space-x-4 hover:bg-gray-300 duration-200 p-1 rounded-md cursor-pointer"
+          >
             <div className="text-xl ">{item.icon}</div>
             <span>{item.name}</span>
           </div>
